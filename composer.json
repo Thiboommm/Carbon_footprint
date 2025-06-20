@@ -1,0 +1,20 @@
+{
+    "name": "convert/module-carbon-footprint",
+    "description": "Calculate carbon footprint when order is placed",
+    "type": "magento2-module",
+    "version": "0.1.0",
+    "require": {
+        "magento/framework": "*"
+    },
+    "license": [
+        "Commercial"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Convert\\CarbonFootprint\\": ""
+        }
+    }
+}

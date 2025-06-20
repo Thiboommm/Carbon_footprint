@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.w3.org/2001/XMLSchema-instance
+       http://www.magento.com/xml/schema/config.xsd">
+
+    <system>
+        <section id="carbon_footprint" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1"
+                 showInStore="1">
+            <label>Carbon Footprint</label>
+            <tab>sales</tab>
+            <resource>Magento_Backend::admin</resource>
+            <group id="carbon_footprint" translate="label" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Carbon Footprint</label>
+                <field id="api_key" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1"
+                       showInStore="1">
+                    <label>API Key</label>
+                </field>
+                <field id="carbon_footprint_index" translate="label" type="text" sortOrder="20" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Carbon Footprint Index</label>
+                    <validate>validate-number</validate>
+                </field>
+                <field id="warehouse_location" translate="label" type="textarea" sortOrder="30" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Warehouse Location (Latitude, Longitude)</label>
+                    <comment>Enter the location in the format: latitude,longitude (e.g., 48.1351,11.5820)</comment>
+                </field>
+
+            </group>
+        </section>
+    </system>
+</config>
