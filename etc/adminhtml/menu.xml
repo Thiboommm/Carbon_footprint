@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Convert_CarbonFootprint::sustainability"
+             title="Sustainability"
+             module="Convert_CarbonFootprint"
+             sortOrder="999"
+             parent="Magento_Reports::report"
+             resource="Convert_CarbonFootprint::sustainability"/>
+        <add id="Convert_CarbonFootprint::report"
+             title="Carbon Footprint"
+             module="Convert_CarbonFootprint"
+             sortOrder="10"
+             parent="Convert_CarbonFootprint::sustainability"
+             action="convert_carbonfootprint/index/index"
+             resource="Convert_CarbonFootprint::report"/>
+    </menu>
+</config>

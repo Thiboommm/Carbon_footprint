@@ -1,0 +1,20 @@
+<?php
+/**
+ * @var Chart $block
+ * @var Escaper $escaper
+ */
+
+use Convert\CarbonFootprint\Block\Adminhtml\Chart;
+use Magento\Framework\Escaper;
+
+$chartDataUrl = $block->getChartDataUrl();
+?>
+
+<canvas id="carbonChart" width="600" height="400"></canvas>
+<script type="text/javascript">
+    require(['Convert_CarbonFootprint/js/chart-render'], function (chartRender) {
+        const canvas = document.getElementById('carbonChart');
+        const ajaxUrl = '<?php echo $escaper->escapeUrl($chartDataUrl); ?>';
+        chartRender.renderChart(ajaxUrl, canvas);
+    });
+</script>

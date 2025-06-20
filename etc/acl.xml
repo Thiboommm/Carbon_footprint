@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Convert_CarbonFootprint::sustainability" title="Sustainability Reports" sortOrder="10"/>
+                <resource id="Convert_CarbonFootprint::report" title="Carbon Footprint" sortOrder="20">
+                    <resource id="Convert_CarbonFootprint::chart" title="View Chart Data"/>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>
